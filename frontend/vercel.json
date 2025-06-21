@@ -12,11 +12,6 @@
       "NEXT_PUBLIC_API_URL": "https://scoopsocials-clean-production.up.railway.app"
     }
   },
-  "functions": {
-    "src/pages/api/**/*.ts": {
-      "runtime": "@vercel/node"
-    }
-  },
   "rewrites": [
     {
       "source": "/api/(.*)",
