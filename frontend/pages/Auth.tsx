@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useRouter } from "next/router";
 
 // Step enums for clarity
 enum Step {
@@ -29,7 +29,7 @@ export default function Auth() {
   const [socials, setSocials] = useState<{ [platform: string]: string }>({});
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
-  const navigate = useNavigate();
+  const router = useRouter();
 
   // Social connection state
   const [socialConnections, setSocialConnections] = useState<{
@@ -43,9 +43,9 @@ export default function Auth() {
   // Handle redirect when onboarding is complete
   useEffect(() => {
     if (step === Step.Complete) {
-      setTimeout(() => navigate("/home"), 1200);
+      setTimeout(() => router.push("/Home"), 1200);
     }
-  }, [step, navigate]);
+  }, [step, router]);
 
   // Clear error when step changes
   useEffect(() => {
@@ -137,7 +137,7 @@ export default function Auth() {
           phone: localNumber 
         }));
         setStep(Step.SignInSuccess);
-        setTimeout(() => navigate("/home"), 1200);
+        setTimeout(() => router.push("/Home"), 1200);
       } else {
         setStep(Step.ProfileCreation);
       }

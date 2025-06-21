@@ -6,15 +6,17 @@ const IndexPage: React.FC = () => {
   const router = useRouter();
 
   useEffect(() => {
-    // Check if user is authenticated
-    const isAuthenticated = localStorage.getItem('auth_token');
-    
-    if (!isAuthenticated) {
-      // Redirect to auth page
-      router.push('/Auth');
-    } else {
-      // Redirect to home page
-      router.push('/Home');
+    // Check if user is authenticated - only on client side
+    if (typeof window !== 'undefined') {
+      const isAuthenticated = localStorage.getItem('auth_token');
+      
+      if (!isAuthenticated) {
+        // Redirect to auth page
+        router.push('/Auth');
+      } else {
+        // Redirect to home page
+        router.push('/Home');
+      }
     }
   }, [router]);
 

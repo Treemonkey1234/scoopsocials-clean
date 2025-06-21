@@ -1,11 +1,19 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Events: React.FC = () => {
+  const [hasIncompleteSetup, setHasIncompleteSetup] = useState(false);
+
+  useEffect(() => {
+    // Check for incomplete profile setup - only on client side
+    if (typeof window !== 'undefined') {
+      const walkthroughCompleted = localStorage.getItem('walkthroughCompleted');
+      const socialAccounts = localStorage.getItem('userSocialAccounts');
+      setHasIncompleteSetup(!walkthroughCompleted || !socialAccounts);
+    }
+  }, []);
+
   const checkWarnings = () => {
-    const walkthroughCompleted = localStorage.getItem('walkthroughCompleted');
-    const socialAccounts = localStorage.getItem('userSocialAccounts');
-    
-    if (!walkthroughCompleted || !socialAccounts) {
+    if (hasIncompleteSetup) {
       alert('⚠️ Complete your profile setup to participate in events! Add social accounts and friends to boost your trust score.');
       return false;
     }

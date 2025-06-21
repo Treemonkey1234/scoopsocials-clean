@@ -1,13 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Profile: React.FC = () => {
   const [showTrustBreakdown, setShowTrustBreakdown] = useState(false);
   const [showSocialModal, setShowSocialModal] = useState(false);
+  const [hasIncompleteSetup, setHasIncompleteSetup] = useState(false);
 
-  // Check for incomplete profile setup
-  const walkthroughCompleted = localStorage.getItem('walkthroughCompleted');
-  const socialAccounts = localStorage.getItem('userSocialAccounts');
-  const hasIncompleteSetup = !walkthroughCompleted || !socialAccounts;
+  useEffect(() => {
+    // Check for incomplete profile setup - only on client side
+    if (typeof window !== 'undefined') {
+      const walkthroughCompleted = localStorage.getItem('walkthroughCompleted');
+      const socialAccounts = localStorage.getItem('userSocialAccounts');
+      setHasIncompleteSetup(!walkthroughCompleted || !socialAccounts);
+    }
+  }, []);
 
   const checkPostWarning = () => {
     if (hasIncompleteSetup) {
