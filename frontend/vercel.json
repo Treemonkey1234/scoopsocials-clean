@@ -5,11 +5,11 @@
   "installCommand": "npm install",
   "devCommand": "npm run dev",
   "env": {
-    "NEXT_PUBLIC_API_URL": "@api_url"
+    "NEXT_PUBLIC_API_URL": "https://scoopsocials-clean-production.up.railway.app"
   },
   "build": {
     "env": {
-      "NEXT_PUBLIC_API_URL": "@api_url"
+      "NEXT_PUBLIC_API_URL": "https://scoopsocials-clean-production.up.railway.app"
     }
   },
   "functions": {
@@ -20,7 +20,7 @@
   "rewrites": [
     {
       "source": "/api/(.*)",
-      "destination": "$NEXT_PUBLIC_API_URL/api/$1"
+      "destination": "https://scoopsocials-clean-production.up.railway.app/api/$1"
     }
   ],
   "headers": [
