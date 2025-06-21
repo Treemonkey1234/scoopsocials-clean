@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import { useAuth } from '../contexts/AuthContext';
 
 const Profile: React.FC = () => {
   const [showTrustBreakdown, setShowTrustBreakdown] = useState(false);
   const [showSocialModal, setShowSocialModal] = useState(false);
+  const { handleLogout, user } = useAuth();
 
   // Check for incomplete profile setup
   const walkthroughCompleted = localStorage.getItem('walkthroughCompleted');
@@ -45,8 +47,8 @@ const Profile: React.FC = () => {
               👤
             </div>
             <div className="ml-4">
-              <h1 className="text-xl font-bold text-gray-800">Nick Hemingway</h1>
-              <p className="text-gray-600">@nickhemingway9</p>
+              <h1 className="text-xl font-bold text-gray-800">{user?.name || 'Demo User'}</h1>
+              <p className="text-gray-600">@{user?.username || 'demo_user'}</p>
               <p className="text-sm text-gray-500">Phoenix, AZ • Joined March 2024</p>
             </div>
           </div>
@@ -140,6 +142,12 @@ const Profile: React.FC = () => {
           </button>
           <button className="w-full bg-gray-200 text-gray-700 py-3 rounded-lg hover:bg-gray-300 font-medium">
             ⚙️ Settings
+          </button>
+          <button 
+            onClick={handleLogout}
+            className="w-full bg-red-500 text-white py-3 rounded-lg hover:bg-red-600 font-medium"
+          >
+            🚪 Sign Out
           </button>
         </div>
       </div>
