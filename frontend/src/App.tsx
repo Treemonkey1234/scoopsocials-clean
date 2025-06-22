@@ -4,11 +4,11 @@ import { AuthProvider, useAuth } from './contexts/AuthContext';
 import { AuthModal } from './components/AuthModal';
 import { WalkthroughModal } from './components/WalkthroughModal';
 import { TestNewUser } from './components/TestNewUser';
-import Home from './pages/Home';
-import Events from './pages/Events';
-import Search from './pages/Search';
-import Profile from './pages/Profile';
-import Friends from './pages/Friends';
+import Home from './screens/Home';
+import Events from './screens/Events';
+import Search from './screens/Search';
+import Profile from './screens/Profile';
+import Friends from './screens/Friends';
 
 type ScreenType = 'home' | 'events' | 'search' | 'friends' | 'profile';
 
