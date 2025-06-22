@@ -1,3 +1,4 @@
+// ScoopSocials App - Updated: 2025-01-07 18:30 UTC
 import React, { useState, useEffect } from 'react';
 import { AuthProvider, useAuth } from './contexts/AuthContext';
 import { AuthModal } from './components/AuthModal';
