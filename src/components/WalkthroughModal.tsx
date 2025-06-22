@@ -101,7 +101,7 @@ export const WalkthroughModal: React.FC<WalkthroughModalProps> = ({
       case 1:
         return (
           <div className="text-center">
-            <div className="text-4xl mb-4">🏠</div>
+            <div className="text-4xl mb-4">👋</div>
             <h2 className="text-2xl font-bold text-gray-800 mb-4">Welcome to Scoop Socials!</h2>
             <p className="text-gray-600 mb-6">
               This is your HOME FEED where you'll see REVIEWS from your network about people.
@@ -109,14 +109,14 @@ export const WalkthroughModal: React.FC<WalkthroughModalProps> = ({
             <div className="bg-gray-50 rounded-lg p-4 mb-6">
               <div className="text-left space-y-3">
                 <div className="border-b pb-2">
-                  <div className="font-semibold">👤 John reviewed Sarah</div>
+                  <div className="font-semibold">📝 John reviewed Sarah ⭐⭐⭐⭐⭐</div>
                   <div className="text-sm text-gray-600">"Great project partner, very reliable"</div>
-                  <div className="text-sm text-gray-500">👍 12  👎 3  💬 5</div>
+                  <div className="text-sm text-gray-500">👍 12  💬 3  🔄 5</div>
                 </div>
                 <div>
-                  <div className="font-semibold">👤 Mike reviewed Lisa</div>
+                  <div className="font-semibold">📝 Mike reviewed Lisa ⭐⭐⭐⭐</div>
                   <div className="text-sm text-gray-600">"Helpful mentor, always on time"</div>
-                  <div className="text-sm text-gray-500">👍 8   👎 7  💬 2</div>
+                  <div className="text-sm text-gray-500">👍 8   💬 7  🔄 2</div>
                 </div>
               </div>
             </div>
@@ -124,7 +124,7 @@ export const WalkthroughModal: React.FC<WalkthroughModalProps> = ({
               onClick={nextStep}
               className="bg-cyan-600 text-white px-6 py-2 rounded-lg hover:bg-cyan-700"
             >
-              Next: See Reviews ➡️
+              Next: See Reviews →
             </button>
           </div>
         );
@@ -132,14 +132,14 @@ export const WalkthroughModal: React.FC<WalkthroughModalProps> = ({
       case 2:
         return (
           <div className="text-center">
-            <div className="text-4xl mb-4">⭐</div>
+            <div className="text-4xl mb-4">🎯</div>
             <h2 className="text-2xl font-bold text-gray-800 mb-4">Trust Scores</h2>
             <p className="text-gray-600 mb-6">
               These show how reliable people are based on community reviews!
             </p>
             <div className="bg-gray-50 rounded-lg p-4 mb-6">
               <div className="text-left">
-                <div className="font-semibold mb-2">👤 John reviewed Sarah</div>
+                <div className="font-semibold mb-2">📝 John reviewed Sarah ⭐⭐⭐⭐⭐</div>
                 <div className="bg-yellow-100 border-l-4 border-yellow-500 p-3 rounded">
                   <div className="font-semibold text-yellow-800">Sarah: 94/100 Trust Score</div>
                   <div className="text-sm text-yellow-700">Based on 23 community reviews</div>
@@ -150,7 +150,7 @@ export const WalkthroughModal: React.FC<WalkthroughModalProps> = ({
               onClick={nextStep}
               className="bg-cyan-600 text-white px-6 py-2 rounded-lg hover:bg-cyan-700"
             >
-              Next: Search 🔍
+              Next: Search →
             </button>
           </div>
         );
@@ -166,7 +166,7 @@ export const WalkthroughModal: React.FC<WalkthroughModalProps> = ({
             <div className="bg-gray-50 rounded-lg p-4 mb-6">
               <input
                 type="text"
-                placeholder="Try 'Sarah Johnson' or 'New York'"
+                placeholder="Try &quot;Sarah Johnson&quot; or &quot;New York&quot;"
                 className="w-full p-3 border rounded-lg mb-4"
                 disabled
               />
@@ -180,7 +180,7 @@ export const WalkthroughModal: React.FC<WalkthroughModalProps> = ({
               onClick={nextStep}
               className="bg-cyan-600 text-white px-6 py-2 rounded-lg hover:bg-cyan-700"
             >
-              Next: Events 🎉
+              Next: Events →
             </button>
           </div>
         );
@@ -188,7 +188,7 @@ export const WalkthroughModal: React.FC<WalkthroughModalProps> = ({
       case 4:
         return (
           <div className="text-center">
-            <div className="text-4xl mb-4">🎉</div>
+            <div className="text-4xl mb-4">📅</div>
             <h2 className="text-2xl font-bold text-gray-800 mb-4">Meet in Real Life!</h2>
             <p className="text-gray-600 mb-6">
               Events help you connect with your network offline. Meet people you can later review!
@@ -196,14 +196,14 @@ export const WalkthroughModal: React.FC<WalkthroughModalProps> = ({
             <div className="bg-gray-50 rounded-lg p-4 mb-6">
               <div className="text-left space-y-3">
                 <div className="border-b pb-2">
-                  <div className="font-semibold">🎯 Tech Meetup Tonight</div>
-                  <div className="text-sm text-gray-600">📍 Downtown Cafe • 🕖 7:00 PM</div>
-                  <div className="text-sm text-gray-500">👥 12 going • ⭐ Trust score: 85+ required</div>
+                  <div className="font-semibold">🎉 Tech Meetup Tonight</div>
+                  <div className="text-sm text-gray-600">📍 Downtown Cafe • 7:00 PM</div>
+                  <div className="text-sm text-gray-500">👥 12 going • Trust Req: 70+</div>
                 </div>
                 <div>
-                  <div className="font-semibold">🍕 Community Pizza Night</div>
-                  <div className="text-sm text-gray-600">📍 Local Park • 🕕 6:00 PM</div>
-                  <div className="text-sm text-gray-500">👥 28 going • ⭐ Trust score: 70+ required</div>
+                  <div className="font-semibold">🍕 Pizza & Code Session</div>
+                  <div className="text-sm text-gray-600">📍 Library • Tomorrow 6PM</div>
+                  <div className="text-sm text-gray-500">👥 8 going • Trust Req: 50+</div>
                 </div>
               </div>
             </div>
@@ -211,7 +211,7 @@ export const WalkthroughModal: React.FC<WalkthroughModalProps> = ({
               onClick={nextStep}
               className="bg-cyan-600 text-white px-6 py-2 rounded-lg hover:bg-cyan-700"
             >
-              Next: Friends 👥
+              Next: Friends →
             </button>
           </div>
         );
@@ -220,24 +220,29 @@ export const WalkthroughModal: React.FC<WalkthroughModalProps> = ({
         return (
           <div className="text-center">
             <div className="text-4xl mb-4">👥</div>
-            <h2 className="text-2xl font-bold text-gray-800 mb-4">Build Your Network</h2>
+            <h2 className="text-2xl font-bold text-gray-800 mb-4">Your Network</h2>
             <p className="text-gray-600 mb-6">
-              Connect with friends to build trust and unlock better opportunities!
+              This is where you'll see your friends and their trust scores. Build meaningful connections!
             </p>
             <div className="bg-gray-50 rounded-lg p-4 mb-6">
               <div className="text-left space-y-3">
-                <div className="text-sm font-semibold">📞 Import Phone Contacts</div>
-                <div className="text-sm text-gray-600">Find friends who are already using ScoopSocials</div>
-                <button 
-                  onClick={importPhoneContacts}
-                  className="w-full bg-blue-100 text-blue-800 py-2 rounded-lg hover:bg-blue-200"
-                >
-                  📱 Import Contacts
-                </button>
-                <div className="border-t pt-3 mt-3">
-                  <div className="text-sm font-semibold">🔗 Recommended Connections</div>
-                  <div className="text-sm text-gray-600">👤 3 mutual connections with Sarah</div>
-                  <div className="text-sm text-gray-600">👤 5 mutual connections with Mike</div>
+                <div className="text-sm font-semibold mb-2">🔗 Your Network</div>
+                <div className="flex items-center justify-between p-2 bg-white rounded">
+                  <div>
+                    <div className="font-semibold">👤 Sarah Johnson</div>
+                    <div className="text-sm text-gray-500">Trust Score: 94</div>
+                  </div>
+                  <div className="text-green-600 text-sm">Connected</div>
+                </div>
+                <div className="flex items-center justify-between p-2 bg-white rounded">
+                  <div>
+                    <div className="font-semibold">👤 Alex Chen</div>
+                    <div className="text-sm text-gray-500">Trust Score: 87</div>
+                  </div>
+                  <div className="text-green-600 text-sm">Connected</div>
+                </div>
+                <div className="text-center text-sm text-gray-500 mt-4">
+                  + Import contacts to find more friends
                 </div>
               </div>
             </div>
@@ -245,7 +250,7 @@ export const WalkthroughModal: React.FC<WalkthroughModalProps> = ({
               onClick={nextStep}
               className="bg-cyan-600 text-white px-6 py-2 rounded-lg hover:bg-cyan-700"
             >
-              Next: Setup Profile 📱
+              Next: Your Profile →
             </button>
           </div>
         );
@@ -253,20 +258,27 @@ export const WalkthroughModal: React.FC<WalkthroughModalProps> = ({
       case 6:
         return (
           <div className="text-center">
-            <div className="text-4xl mb-4">📱</div>
-            <h2 className="text-2xl font-bold text-gray-800 mb-4">Connect Your Social Accounts</h2>
+            <div className="text-4xl mb-4">🚀</div>
+            <h2 className="text-2xl font-bold text-gray-800 mb-4">Connect & Discover!</h2>
             <p className="text-gray-600 mb-6">
-              Link your social profiles to boost your trust score and credibility!
+              Add your social profiles and import phone contacts to find people you already know!
             </p>
             
-            <div className="bg-gray-50 rounded-lg p-4 mb-6 max-h-80 overflow-y-auto">
-              {socialAccounts.map((account, index) => (
-                <div key={index} className="mb-4 p-3 bg-white rounded-lg">
-                  <div className="flex items-center justify-between mb-2">
+            <div className="mb-6">
+              <h3 className="text-lg font-semibold mb-3">📱 ADD SOCIAL PROFILES</h3>
+              <div className="space-y-3">
+                {socialAccounts.map((account, index) => (
+                  <div key={index} className="flex gap-2 items-center">
                     <select
                       value={account.platform}
-                      onChange={(e) => updateSocialAccount(index, 'platform', e.target.value)}
-                      className="flex-1 mr-2 p-2 border rounded"
+                      onChange={(e) => {
+                        if (e.target.value === 'other') {
+                          setShowOtherModal(true);
+                        } else {
+                          updateSocialAccount(index, 'platform', e.target.value);
+                        }
+                      }}
+                      className="border rounded px-3 py-2 flex-1"
                     >
                       {SOCIAL_PLATFORMS.map(platform => (
                         <option key={platform.value} value={platform.value}>
@@ -274,66 +286,58 @@ export const WalkthroughModal: React.FC<WalkthroughModalProps> = ({
                         </option>
                       ))}
                     </select>
+                    <input
+                      type="text"
+                      placeholder="@username"
+                      value={account.username}
+                      onChange={(e) => updateSocialAccount(index, 'username', e.target.value)}
+                      className="border rounded px-3 py-2 flex-1"
+                    />
                     {socialAccounts.length > 1 && (
                       <button
                         onClick={() => removeSocialAccount(index)}
-                        className="text-red-500 hover:text-red-700 ml-2"
+                        className="text-red-500 hover:text-red-700 px-2"
                       >
-                        ❌
+                        ×
                       </button>
                     )}
                   </div>
-                  
-                  {account.platform === 'other' ? (
-                    <div className="space-y-2">
-                      <input
-                        type="text"
-                        placeholder="Platform name"
-                        value={account.customPlatform || ''}
-                        onChange={(e) => updateSocialAccount(index, 'customPlatform', e.target.value)}
-                        className="w-full p-2 border rounded"
-                      />
-                      <input
-                        type="url"
-                        placeholder="Website URL"
-                        value={account.customUrl || ''}
-                        onChange={(e) => updateSocialAccount(index, 'customUrl', e.target.value)}
-                        className="w-full p-2 border rounded"
-                      />
-                    </div>
-                  ) : (
-                    <input
-                      type="text"
-                      placeholder="Username"
-                      value={account.username}
-                      onChange={(e) => updateSocialAccount(index, 'username', e.target.value)}
-                      className="w-full p-2 border rounded"
-                    />
-                  )}
-                </div>
-              ))}
-              
+                ))}
+                <button
+                  onClick={addSocialAccount}
+                  className="text-cyan-600 hover:text-cyan-700 text-sm"
+                >
+                  📎 Add another? [+]
+                </button>
+              </div>
+            </div>
+
+            <div className="mb-6">
+              <h3 className="text-lg font-semibold mb-3">📞 FIND FRIENDS</h3>
               <button
-                onClick={addSocialAccount}
-                className="w-full p-2 border-2 border-dashed border-gray-300 rounded-lg text-gray-600 hover:border-cyan-500 hover:text-cyan-600"
+                onClick={importPhoneContacts}
+                className="bg-gray-100 border-2 border-dashed border-gray-300 rounded-lg p-4 w-full hover:bg-gray-50"
               >
-                ➕ Add another platform?
+                📱 Import Phone Contacts
               </button>
             </div>
 
-            <div className="flex space-x-3">
+            <div className="flex gap-3 justify-center">
               <button
                 onClick={skipToEnd}
-                className="flex-1 bg-gray-200 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-300"
+                className="text-gray-500 px-6 py-2 rounded-lg hover:text-gray-700"
               >
-                Skip for now
+                Skip for Now
               </button>
               <button
                 onClick={finishWalkthrough}
-                className="flex-1 bg-cyan-600 text-white px-4 py-2 rounded-lg hover:bg-cyan-700"
+                className="bg-cyan-600 text-white px-6 py-2 rounded-lg hover:bg-cyan-700"
               >
-                Complete Setup ✅
+                Let's Go!
               </button>
+            </div>
+            <div className="text-xs text-red-500 mt-2">
+              ⚠️ Skipping will limit participation until you add accounts and friends
             </div>
           </div>
         );
@@ -343,90 +347,72 @@ export const WalkthroughModal: React.FC<WalkthroughModalProps> = ({
     }
   };
 
-  // Custom Platform Modal
-  const renderOtherModal = () => {
-    if (!showOtherModal) return null;
-
-    return (
-      <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-        <div className="bg-white p-6 rounded-lg max-w-sm w-full mx-4">
-          <h3 className="text-lg font-semibold mb-4">Add Custom Platform</h3>
-          <div className="space-y-3">
-            <input
-              type="text"
-              placeholder="Platform name (e.g., MySpace)"
-              value={customPlatform}
-              onChange={(e) => setCustomPlatform(e.target.value)}
-              className="w-full p-3 border rounded-lg"
-            />
-            <input
-              type="url"
-              placeholder="Website URL (e.g., https://myspace.com)"
-              value={customUrl}
-              onChange={(e) => setCustomUrl(e.target.value)}
-              className="w-full p-3 border rounded-lg"
-            />
-          </div>
-          <div className="flex space-x-3 mt-4">
-            <button
-              onClick={() => setShowOtherModal(false)}
-              className="flex-1 bg-gray-200 text-gray-700 px-4 py-2 rounded-lg"
-            >
-              Cancel
-            </button>
-            <button
-              onClick={handleAddOtherPlatform}
-              className="flex-1 bg-cyan-600 text-white px-4 py-2 rounded-lg"
-              disabled={!customPlatform || !customUrl}
-            >
-              Add Platform
-            </button>
-          </div>
-        </div>
-      </div>
-    );
-  };
-
   return (
     <>
-      <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-40">
-        <div className="bg-white p-6 rounded-lg max-w-md w-full mx-4 max-h-[90vh] overflow-y-auto">
-          {/* Progress indicator */}
-          <div className="flex justify-between items-center mb-6">
-            <div className="text-sm text-gray-500">
-              Step {currentStep} of {totalSteps}
+      {isOpen && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+          <div className="bg-white rounded-lg p-6 max-w-md w-full max-h-[90vh] overflow-y-auto">
+            <div className="flex justify-between items-center mb-4">
+              <div className="text-sm text-gray-500">
+                Step {currentStep} of {totalSteps}
+              </div>
+              <button
+                onClick={onClose}
+                className="text-gray-400 hover:text-gray-600 text-xl"
+              >
+                ×
+              </button>
             </div>
-            <button
-              onClick={onClose}
-              className="text-gray-400 hover:text-gray-600"
-            >
-              ✕
-            </button>
-          </div>
 
-          {/* Progress bar */}
-          <div className="w-full bg-gray-200 rounded-full h-2 mb-6">
-            <div
-              className="bg-cyan-600 h-2 rounded-full transition-all duration-300"
-              style={{ width: `${(currentStep / totalSteps) * 100}%` }}
-            ></div>
-          </div>
+            <div className="w-full bg-gray-200 rounded-full h-2 mb-6">
+              <div
+                className="bg-cyan-600 h-2 rounded-full transition-all duration-300"
+                style={{ width: `${(currentStep / totalSteps) * 100}%` }}
+              />
+            </div>
 
-          {/* Step content */}
-          {renderStep()}
+            {renderStep()}
 
-          {/* Skip button */}
-          <div className="mt-6 text-center">
-            <button
-              onClick={skipToEnd}
-              className="text-sm text-gray-500 hover:text-gray-700 underline"
-            >
-              Skip walkthrough
-            </button>
+            {showOtherModal && (
+              <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-60">
+                <div className="bg-white rounded-lg p-6 max-w-sm w-full mx-4">
+                  <h3 className="text-lg font-semibold mb-4">Add Custom Platform</h3>
+                  <div className="space-y-3">
+                    <input
+                      type="text"
+                      placeholder="Platform Name (e.g. Behance, Medium)"
+                      value={customPlatform}
+                      onChange={(e) => setCustomPlatform(e.target.value)}
+                      className="w-full border rounded px-3 py-2"
+                    />
+                    <input
+                      type="url"
+                      placeholder="https://www.platform.com/username"
+                      value={customUrl}
+                      onChange={(e) => setCustomUrl(e.target.value)}
+                      className="w-full border rounded px-3 py-2"
+                    />
+                  </div>
+                  <div className="flex gap-3 mt-6">
+                    <button
+                      onClick={() => setShowOtherModal(false)}
+                      className="text-gray-500 px-4 py-2 rounded hover:text-gray-700"
+                    >
+                      Cancel
+                    </button>
+                    <button
+                      onClick={handleAddOtherPlatform}
+                      className="bg-cyan-600 text-white px-4 py-2 rounded hover:bg-cyan-700"
+                    >
+                      Add Platform
+                    </button>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         </div>
-      </div>
-      {renderOtherModal()}
+      )}
     </>
   );
 }; 
