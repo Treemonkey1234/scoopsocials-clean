@@ -1,0 +1,8 @@
+backend/
+scripts/
+docs/
+.git/
+*.md
+*.txt
+.env.local
+.env.example 

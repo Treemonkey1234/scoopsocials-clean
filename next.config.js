@@ -2,22 +2,32 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  output: 'export',
-  trailingSlash: true,
-  basePath: '/scoopsocials-mobile-demo',
-  assetPrefix: '/scoopsocials-mobile-demo/',
-  images: {
-    unoptimized: true,
+  trailingSlash: false,
+  poweredByHeader: false,
+  compress: true,
+  experimental: {
+    optimizeCss: true,
   },
   env: {
-    NEXT_PUBLIC_API_URL: process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001',
+    CUSTOM_KEY: 'scoopsocials-clean-deployment',
   },
-  typescript: {
-    ignoreBuildErrors: false,
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'X-Frame-Options',
+            value: 'DENY',
+          },
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff',
+          },
+        ],
+      },
+    ];
   },
-  eslint: {
-    ignoreDuringBuilds: false,
-  },
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
